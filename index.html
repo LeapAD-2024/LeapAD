@@ -186,28 +186,12 @@
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-three-fifths">
+        <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
               <b>
-                Autonomous driving has advanced significantly due to improvements in sensors, machine learning, and
-                artificial intelligence. However, prevailing data-driven methods struggle with intricate scenarios and
-                causal relationships, hindering adaptability and interpretability in varied environments. To address the
-                above problems, we introduce <span style="color: #ff7e5f;">LeapAD</span>, a novel paradigm for
-                autonomous driving inspired by the human cognitive process. Specifically, LeapAD emulates human
-                attention by selecting critical objects relevant to driving decisions, simplifying environmental
-                interpretation, and mitigating decision-making complexities. Additionally, LeapAD incorporates an
-                innovative dual-process decision-making module, which consists of an Analytic System <i>(System-II)</i>
-                for thorough analysis and reasoning and a Heuristic System <i>(System-I)</i> for swift and empirical
-                processing. The Analytic System leverages its logical reasoning to accumulate linguistic driving
-                experience, which is then transferred to the Heuristic System by supervised fine-tuning. Through
-                reflection mechanisms and a growing memory bank, LeapAD continuously improves itself from past mistakes
-                in a closed-loop environment.
-                Closed-loop testing in CARLA shows that LeapAD outperforms all methods relying solely on camera input,
-                while only requiring 1-2 orders of magnitude less labeled data. Experiments also demonstrate that as the
-                memory bank expands, the Heuristic System, with only 1.8B parameters, can inherit the knowledge of a
-                hundred-billion parameters Analytic System and achieve continuous performance improvement.
+                Autonomous driving has advanced significantly due to sensors, machine learning, and artificial intelligence improvements. However, prevailing methods struggle with intricate scenarios and causal relationships, hindering adaptability and interpretability in varied environments. To address the above problems, we introduce <span style="color: #ff7e5f;">LeapAD</span>, a novel paradigm for autonomous driving inspired by the human cognitive process. Specifically, LeapAD emulates human attention by selecting critical objects relevant to driving decisions, simplifying environmental interpretation, and mitigating decision-making complexities. Additionally, LeapAD incorporates an innovative dual-process decision-making module, which consists of an Analytic Process (System-II) for thorough analysis and reasoning, along with a Heuristic Process (System-I) for swift and empirical processing. The Analytic Process leverages its logical reasoning to accumulate linguistic driving experience, which is then transferred to the Heuristic Process by supervised fine-tuning. Through reflection mechanisms and a growing memory bank, LeapAD continuously improves itself from past mistakes in a closed-loop environment. Closed-loop testing in CARLA shows that LeapAD outperforms all methods relying solely on camera input, requiring 1-2 orders of magnitude less labeled data. Experiments also demonstrate that as the memory bank expands, the Heuristic Process with only 1.8B parameters can inherit the knowledge from a GPT-4 powered Analytic Process and achieve continuous performance improvement. 
               </b>
             </p>
           </div>
@@ -231,7 +215,7 @@
           <h2 class="title">LeapAD Architecture</h2>
           <div class="hero-body">
             <center>
-              <embed type="image/png" src="static/images/brief_pipeline.png" width="80%" />
+              <embed type="image/png" src="static/images/brief_pipeline.png" width="90%" />
             </center>
             <h2 class="subtitle has-text-justified" style="padding-top: 1rem;">
               In LeapAD, the Scene Understanding module mimics human driving attention,
@@ -239,20 +223,20 @@
               It provides detailed descriptions and behavioral reasoning of these objects, facilitating informed
               subsequent
               decisions.
-              The Analytic System then uses an LLM to accumulate experience in driving analysis and decision-making,
+              The Analytic Process then uses an LLM to accumulate experience in driving analysis and decision-making,
               conducting reflections on accidents. The experience is stored in memory and transferred to a lightweight
-              language model, forming our Heuristic System for quick responses and continuous learning
+              language model, forming our  Heuristic Process for quick responses and continuous learning
             </h2>
             <h2 class="subtitle has-text-justified" style="padding-top: 1rem;">
-              <b>The Heuristic System</b> in LeapAD performs closed-loop decision-making using a few-shot strategy. It
+              <b>The  Heuristic Process</b> in LeapAD performs closed-loop decision-making using a few-shot strategy. It
               is
               designed for enabling instant decision-making within the vehicle. When encountering traffic accidents, the
-              Heuristic System relies on the knowledge transferred from the Analytic System to make quick and efficient
+              Heuristic Process relies on the knowledge transferred from the Analytic Process to make quick and efficient
               decisions. This lightweight model ensures rapid responses and adaptability in various driving scenarios,
               maintaining a high level of performance with minimal computational resources.
             </h2>
             <h2 class="subtitle has-text-justified" style="padding-top: 1rem;">
-              <b>The Analytic System</b> in LeapAD is designed for thorough analysis and reasoning. It processes more
+              <b>The Analytic Process</b> in LeapAD is designed for thorough analysis and reasoning. It processes more
               complex scenarios and builds a comprehensive memory base of high-quality driving decisions. The Analytic
               System accumulates experience through continuous learning and self-reflection, analyzing accidents, and
               updating the memory bank. This accumulated knowledge is then transferred to the Fast System through
@@ -383,10 +367,8 @@
           <div class="content">
             <p style="text-align: center;"><i class="fa-solid fa-heart fa-beat-fade" style="color: #ff8787;"></i>
               This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
-                target="_blank">Academic
-                Project Page Template</a> <i class="fa-solid fa-heart fa-beat-fade" style="color: #ff8787;"></i>
+                target="_blank">Academic Project Page Template</a> <i class="fa-solid fa-heart fa-beat-fade" style="color: #ff8787;"></i>
             </p>
-
           </div>
         </div>
       </div>
